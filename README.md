@@ -2,25 +2,15 @@
 
 - [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
 
-# Release
+# Getting Started
 
-When you're ready to release a new version of this pod, increment the version in RemoteConfig.podspec and add a tag with the version name. 
-
-Here are a few useful commands for tagging these releases:
+1. Fork this repository and edit `OEXRemoteConfig.podspec`, `config/local.yml`, and `config/config.yml` to match your project
+2. Run this command to validate your changes: 
 ```
-# Create a new tag
-$ git tag -a 0.0.1 -m "Creating the first custom version"
-
-# Review tags
-$ git describe --tags 
-
-# Save a new tag
-$ git push origin --tags # update github with the list of local tags
+$ pod spec lint OEXRemoteConfig.podspec --verbose --private
 ```
+3. Update your Podfile (or the environment variable mentioned in your Podfile) to pull from your new custom cocoapod URL.
 
-# Testing 
+# FAQ
 
-# Run this command to validate changes to RemoteConfig.podspec
-```
-$ pod spec lint RemoteConfig.podspec --verbose --private
-```
+- [Official guide to making a cocoapod](https://guides.cocoapods.org/making/making-a-cocoapod.html)
